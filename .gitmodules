@@ -6,3 +6,6 @@
 	path = lib/openzeppelin-contracts
 	url = https://github.com/Openzeppelin/openzeppelin-contracts
 	branch = v4.8.1
+[submodule "lib/react-typescript"]
+	path = lib/react-typescript
+	url = https://github.com/LI-YONG-QI/react-typescript
