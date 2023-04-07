@@ -22,6 +22,9 @@ contract Deploy is Script {
     function run() external {
         _setUp();
 
+        //contract version
+        console.log("Contract version: ", IBox(address(proxy)).getVersion());
+
         _consoleVersion(userPrivateKey); // version --> 1
         _upgrade(address(impl2));
         console.log("Upgrade Success!!");
@@ -33,8 +36,7 @@ contract Deploy is Script {
     }
 
     function _consoleVersion(uint256 privateKey) internal {
-        vm.startBroadcast(privateKey);
+        vm.prank(vm.addr(privateKey));
         console.log(IBox(address(proxy)).getVersion());
-        vm.stopBroadcast();
     }
 }
