@@ -9,6 +9,7 @@ interface IBox {
 
 contract Box is IBox, Initializable {
     uint256 num;
+    uint256 test;
 
     function initialize(uint256 _value) external initializer {
         num = _value;
